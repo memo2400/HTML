@@ -1,0 +1,1 @@
+usar el plugin live server para ver en tiempo real nuetro html
