@@ -69,9 +69,55 @@ es basico poner el nimbre html
         <input type="radio" id="tipo" name="plantilla" value="T880"> T880
         <input type="radio" id="tipo" name="plantilla" value="City Star"> City Star
 
+        <br>        
+
+        <!-- Caja de texto numerica -->
+        <br>
+        <label for="programando"> Años de programar </label>
+        <input type="number" id="programando" name="programando" placeholder="años">
+
+        <!-- para subir archivos -->
+        <br>
+        <label for="archivo"> Suba su archivo </label>
+        <input type="file" id="archivo" name="archivo" value="file">
+
+        <!-- para mucho texto -->
         <br>
         <br>
-        <input name="Enviar" type="button" value="Enviar Plantilla"> </button>
+        <label for="opinion"> opinion </label>
+        <textarea id="opinion" name="opinion" placeholder="Escriba su opinion" rows="20" cols="20" > </textarea>
+        
+         <!-- Combobox podemos elegir una por default 
+          se  spupone que con selected pero no jala
+            no jalaba ebido a que faltaba el crtl + f5 -->
+         <br>
+         <br>
+         <label for="plantilla_list"> Elija plantilla </label>
+         <select id="plantilla_list" name="plantilla_list">
+            <optgroup label="Resto del mundo">
+                <option value="M2"> M2 </option>
+                <option value="Scania"> Scania </option>                
+                <option value="T880"> T880 </option>
+                <option value="City Star"> City Star </option>
+            </optgroup>
+
+            <optgroup label="Chinas">
+                
+                <option value="Shacman">Shacman</option>
+                <option value="BYD" selected="selected"> BYD </option>
+                <option value="Sitrak"> Sitrak </option>
+
+            </optgroup>
+
+         </select>
+
+        
+         <!-- El submit es mejor boton porque ese le da fin al formulario -->
+        <br>
+        <br>
+        <input type="button" value="Enviar comando">
+        <input type="submit" value="Enviar Plantilla">
+        <input type="reset" value="Borrar llenado de informacion">
 
 
     </form>
@@ -96,6 +142,8 @@ es basico poner el nimbre html
 01:34:07
 
 01:34:55
+
+01:42:26
 
 
 
