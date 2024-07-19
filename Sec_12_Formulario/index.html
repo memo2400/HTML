@@ -46,21 +46,38 @@ es basico poner el nimbre html
     <h1> Plantillas NVRAM Massivas </h1>
     <hr>
    
-    <form>
+    <!-- envio a un php las cosas y al post es de publicar con un  envio resques body 
+     el blank nos envia el php pagina en blanco-->
+    <form action="envio.php" method="post" target="_blank">
+        
         <!-- <input type="tipo" id="identificador" size="tamaño" name="nombre" value="texto por defecto"> -->
-
-        <!-- el placeholder = nos deja escribir en gris palabras -->
+        <!-- el placeholder = nos deja escribir en gris palabras 
+         maxlenght = marcimo largo
+         pattern = que tipo de caracteres podemos usar, es un tema largisimo 
+         -->
         <label for="usuario"> User: </label>
-        <input type="text" id="usuario" name="usuario" placeholder="escribe tu usuario">
+        <input type="text" id="usuario" name="usuario" placeholder="escribe tu usuario" maxlength="10" minlength="4" pattern="[A-Za-z]{8}">
+        <small>Debe tener 8 caracteres</small>
 
         <br>
         <br>
-        <!-- el type paswword hace que cuando escribimos se ven puntos en lugar de letras -->
+        <!-- aqui podemos poner value= un susario por defecto
+         readonly = bloqueo 
+         disable = nloqueado y en gris-->
+        <input type="text" id="usuario" name="usuario" value="rosasgg" disabled>
+
+        <br>
+        <br>
+        <!-- el type paswword  -->
+        <!-- hace que cuando escribimos se ven puntos en lugar de letras -->
         <label for="password"> Pass: </label>
         <input type="password" id="password" name="password" placeholder="escribe tu contraseña">
+        
+        <!-- Uso de checkbox -->
         <br>
         <input type="checkbox" id="condiciones" name="condiciones" value="¿Tiene conocimiento sobre el uso de plantillas?"> ¿Tiene conocimiento sobre el uso de plantillas?
 
+        <!-- Uso de Radio button -->
         <br>
         <br>
         <input type="radio" id="tipo" name="plantilla" value="M2"> M2
@@ -74,12 +91,12 @@ es basico poner el nimbre html
         <!-- Caja de texto numerica -->
         <br>
         <label for="programando"> Años de programar </label>
-        <input type="number" id="programando" name="programando" placeholder="años">
+        <input type="number" id="programando" name="programando" placeholder="años" max="10" min="1">
 
-        <!-- para subir archivos -->
+        <!-- para subir archivos  multiple= deja subor muchos -->
         <br>
         <label for="archivo"> Suba su archivo </label>
-        <input type="file" id="archivo" name="archivo" value="file">
+        <input type="file" id="archivo" name="archivo" value="file" multiple>
 
         <!-- para mucho texto -->
         <br>
@@ -106,6 +123,9 @@ es basico poner el nimbre html
                 <option value="Shacman">Shacman</option>
                 <option value="BYD" selected="selected"> BYD </option>
                 <option value="Sitrak"> Sitrak </option>
+                <option value="Foton"> Foton </option>
+                <option value="Sinotruk"> Sinotruk </option>
+                <option value="Jac"> Jac </option>
 
             </optgroup>
 
@@ -116,10 +136,18 @@ es basico poner el nimbre html
         <br>
         <br>
         <input type="button" value="Enviar comando">
-        <input type="submit" value="Enviar Plantilla">
+        <input type="submit" value="Enviar Plantilla Sub">
         <input type="reset" value="Borrar llenado de informacion">
 
+        <!-- Botones de envio con forma ventana de confirmacion -->
+        <!-- <input type="button" onclick="alert ('¿En realidad quiere enviar la plantilla?')" value="Enviar Plantilla"> -->
+         <!-- otra forma de acerlo -->
+        <button onclick="alert ('¿En realidad quiere enviar la plantilla?')"> Enviar Plantilla </button>
 
+        <br>
+        <br>
+        <label for="opinion"> Fecha </label>
+        <input type="date" id="fecha" name="fecha" max="2023-07-19">
     </form>
 
 </body>
@@ -144,6 +172,8 @@ es basico poner el nimbre html
 01:34:55
 
 01:42:26
+
+01:48:55
 
 
 
