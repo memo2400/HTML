@@ -54,9 +54,12 @@ es basico poner el nimbre html
         <!-- el placeholder = nos deja escribir en gris palabras 
          maxlenght = marcimo largo
          pattern = que tipo de caracteres podemos usar, es un tema largisimo 
+         
+         required = es obligatorio ########ALERRTA########## esto es hakeable mediante el modo desarrollador de mozilla, por eso no se usa
+         para que sea seguro se usa javascrip o el backend lo bloquea
          -->
         <label for="usuario"> User: </label>
-        <input type="text" id="usuario" name="usuario" placeholder="escribe tu usuario" maxlength="10" minlength="4" pattern="[A-Za-z]{8}">
+        <input type="text" id="usuario" name="usuario" placeholder="escribe tu usuario" maxlength="10" minlength="4" pattern="[A-Za-z]{8}" required>
         <small>Debe tener 8 caracteres</small>
 
         <br>
@@ -72,6 +75,10 @@ es basico poner el nimbre html
         <!-- hace que cuando escribimos se ven puntos en lugar de letras -->
         <label for="password"> Pass: </label>
         <input type="password" id="password" name="password" placeholder="escribe tu contraseña">
+
+        <!-- Correo electronico // aqui el patron ya esta definido por el email, ademas el back end tambein debe validar-->
+        <label for="correo"> Correo: </label>
+        <input type="email" id="correo" name="correo" placeholder="escribe tu correo" required>
         
         <!-- Uso de checkbox -->
         <br>
@@ -175,6 +182,6 @@ es basico poner el nimbre html
 
 01:50:40
 
-
+01:55:35 fin
 
 -->
